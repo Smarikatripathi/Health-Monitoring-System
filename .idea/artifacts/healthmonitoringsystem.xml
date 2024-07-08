@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="healthmonitoringsystem">
+    <output-path>$PROJECT_DIR$/out/artifacts/healthmonitoringsystem</output-path>
+    <root id="archive" name="healthmonitoringsystem.war">
+      <element id="javaee-facet-resources" facet="HealthMonitoringSystem/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="HealthMonitoringSystem" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

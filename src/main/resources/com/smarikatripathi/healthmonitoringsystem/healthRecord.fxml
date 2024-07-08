@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.ComboBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smarikatripathi.healthmonitoringsystem.HealthRecordController">
+    <VBox spacing="20" styleClass="tableVBox" alignment="CENTER" style="-fx-padding: 20px;">
+        <VBox spacing="20" alignment="CENTER">
+            <Button text="Go To Home" onAction="#goToHome"/>
+        </VBox>
+
+    </VBox>
+    <VBox spacing="20" style="-fx-padding: 20px;">
+        <VBox alignment="CENTER">
+            <Label text="Add Health Record" style="-fx-font-size: 15px; -fx-font-weight: bold"/>
+        </VBox>
+        <Label text="User:"/>
+        <ComboBox fx:id="userComboBox" promptText="Select User"/>
+        <Label text="Weight:"/>
+        <TextField fx:id="weightField" promptText="Weight"/>
+        <Label text="Exercise:"/>
+        <TextField fx:id="exerciseField" promptText="Exercise"/>
+        <Label text="Timestamp:"/>
+        <TextField fx:id="timestampField" promptText="Timestamp (YYYY-MM-DD HH:MM:SS)"/>
+        <Button text="Add Health Record" onAction="#addHealthRecord"/>
+        <Label fx:id="responseLabel"/>
+    </VBox>
+
+    <VBox spacing="20" style="-fx-padding: 20pxl">
+        <Label text="All Health Record"/>
+        <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID"/>
+                <TableColumn fx:id="nameColumn" text="Name"/>
+                <TableColumn fx:id="addressColumn" text="Address"/>
+                <TableColumn fx:id="ageColumn" text="Age"/>
+                <TableColumn fx:id="weightColumn" text="Weight"/>
+                <TableColumn fx:id="exerciseColumn" text="Exercise"/>
+                <TableColumn fx:id="timestampColumn" text="Timestamp"/>
+            </columns>
+        </TableView>
+    </VBox>
+</VBox>
